@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm[toml]>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md-reflinks"
+description = "Command line tool to insert Markdown reference links list in Markdown files."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.7"
+keywords = ["markdown", "md"]
+dynamic = ["version"]
+
+[[project.authors]]
+name = "Mark Blakeney"
+email = "mark.blakeney@bullet-systems.net"
+
+[project.urls]
+Homepage = "https://github.com/bulletmark/md-reflinks"
+
+[project.scripts]
+md-reflinks = "md_reflinks:main"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+
+[tool.ruff.format]
+quote-style = "single"
+skip-magic-trailing-comma = true
+
+# vim:se sw=2:
