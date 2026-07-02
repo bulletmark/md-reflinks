@@ -125,7 +125,7 @@ def main() -> str | None:
 
                 # Ensure there is at least one blank line before the reference links
                 if newlinks:
-                    if body[-1].strip():
+                    if body and body[-1].strip():
                         f.write('\n')
 
                     # Write the reference links at the end of the file
