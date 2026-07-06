@@ -113,10 +113,16 @@ def main() -> str | None:
         if args.all:
             newlinks = master_reflinks
         else:
-            newlinks = {k: v for k, v in master_reflinks.items() if k in tags}
+            newlinks = {k: master_reflinks[k] for k in master_reflinks if k in tags}
 
         if not args.no_normalize:
             newlinks = normalize(file, newlinks)
+
+        # Preserve any existing active reference links in the target file that
+        # are not in the master file
+        for key in reflinks:
+            if key in tags and key not in newlinks:
+                newlinks[key] = reflinks[key]
 
         # Update the target file if the reference links have changed or if force is specified
         if newlinks != reflinks or args.force:

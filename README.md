@@ -4,14 +4,18 @@
 `md-reflinks` is a command-line tool that manages common [Markdown
 reference-style links](https://spec.commonmark.org/current/#reference-link)
 across multiple Markdown files. You maintain a single **master** Markdown file
-which contains all your reference link definitions (e.g. `[python]: https://python.org`).
-`md-reflinks` reads that master file and injects the
-relevant definitions into one or more **target** files. This means you only have
-to manage your reference links in one Markdown file.
+which contains all your reference link definitions, e.g. "`[python]: https://python.org`"
+typically all listed together at the bottom of the file.
+`md-reflinks` reads that master file and injects the referenced definitions into
+one or more **target** files. This means you only have to manage your reference
+links in one Markdown file.
 
 By default, only the links that are actually referenced in a target file (i.e.
-those which appear as `[key]` tags in the body) are added. Any existing
-reference-link blocks at the bottom of a target file are replaced.
+those which are referenced as `[key]` tags in the body) are replaced or added
+but you can also choose to append all master link definitions to the target file
+if you prefer. Reference links defined and used in the target that are not
+present in the master file are preserved.
+
 
 ## Usage
 
