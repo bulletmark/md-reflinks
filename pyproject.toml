@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "md-reflinks"
-description = "Command line tool to insert Markdown reference links list in Markdown files."
+description = "Command line tool to insert or update Markdown reference links list in Markdown files."
 readme = "README.md"
 license = "GPL-3.0-or-later"
 requires-python = ">=3.7"

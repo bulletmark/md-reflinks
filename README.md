@@ -25,7 +25,7 @@ Type `md-reflinks -h` to view the usage summary:
 usage: md-reflinks [-h] [-a] [-n] [-f] [-q]
                       master_file_md file_md [file_md ...]
 
-Insert Markdown reference links list in Markdown files.
+Insert or update Markdown reference links list in Markdown files.
 
 positional arguments:
   master_file_md      markdown master file to source link definitions
@@ -70,6 +70,17 @@ avoid self-injection, e.g.:
 ```bash
 uvx md-reflinks README.md *.md
 ```
+
+## Default Options
+
+You can add default options to a personal configuration file
+`~/.config/md-reflinks-flags.conf`. If that file exists then each line of
+options will be concatenated and automatically prepended to your `md-reflinks`
+command line options. Type `md-reflinks -h` to see the options supported.
+
+E.g. in your `~/.config/md-reflinks-flags.conf` you could add the line
+`--no-normalize` to avoid normalizing reference links by default. You can also
+add `--quiet` to avoid reporting updated files by default.
 
 ## License
 
