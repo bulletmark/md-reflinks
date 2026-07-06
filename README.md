@@ -40,6 +40,9 @@ options:
   -f, --force         force update of reference links even if they are
                       unchanged (default: only update if changed)
   -q, --quiet         quiet mode (default: print updated files to stdout)
+
+Note you can set default starting options in ~/.config/md-reflinks.py-
+flags.conf.
 ```
 
 ## Installation and Running

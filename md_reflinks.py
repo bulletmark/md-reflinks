@@ -4,10 +4,11 @@
 # Author: Mark Blakeney, Nov 2024
 from __future__ import annotations
 
-import argparse
 import re
 import sys
 from pathlib import Path
+
+from argparse_from_file import ArgumentParser
 
 
 def normalize(file: Path, reflinks: dict[str, str]) -> dict[str, str]:
@@ -50,7 +51,7 @@ def parse(file: Path) -> tuple[list[str], set[str], dict[str, str]]:
 def main() -> str | None:
     "Main code"
     # Process command line options
-    opt = argparse.ArgumentParser(description=__doc__)
+    opt = ArgumentParser(description=__doc__)
 
     opt.add_argument(
         '-a',
