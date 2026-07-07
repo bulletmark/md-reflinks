@@ -56,7 +56,7 @@ uvx md-reflinks README.md docs/*.md
 
 The above will run the latest version of `md-reflinks` without needing to
 explicitly install it locally. `uvx` will handle installation if needed (on the
-fly very quickly). You can also install it explicitly using [`uv tool
+fly and very quickly). You can also install it explicitly using [`uv tool
 install`][uvtool] if you prefer.
 
 The above example will read reference link definitions from `README.md` and
