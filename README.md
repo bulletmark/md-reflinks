@@ -23,7 +23,7 @@ Type `md-reflinks -h` to view the usage summary:
 
 ```
 usage: md-reflinks [-h] [-a] [-n] [-f] [-q]
-                      master_file_md file_md [file_md ...]
+                   master_file_md file_md [file_md ...]
 
 Insert or update Markdown reference links list in Markdown files.
 
@@ -41,8 +41,7 @@ options:
                       unchanged (default: only update if changed)
   -q, --quiet         quiet mode (default: print updated files to stdout)
 
-Note you can set default starting options in ~/.config/md-reflinks.py-
-flags.conf.
+Note you can set default starting options in ~/.config/md-reflinks-flags.conf.
 ```
 
 ## Installation and Running

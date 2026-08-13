@@ -53,7 +53,7 @@ def init() -> Namespace:
 
 def normalize(file: Path, reflinks: dict[str, str]) -> dict[str, str]:
     "Normalizes reference links by removing the file name from local references"
-    names = set((file.name, file.stem))
+    names = {file.name, file.stem}
     normalized = {}
     for key, link in reflinks.items():
         if '#' in link:
